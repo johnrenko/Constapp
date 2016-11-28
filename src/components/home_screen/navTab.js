@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {
   View,
+  Text,
   TouchableOpacity,
   StyleSheet
 } from 'react-native'
@@ -18,12 +19,9 @@ export default class NavigationTab extends Component {
         {this.props.tabs.map((tab, i) => {
           return (
             <TouchableOpacity key={tab} onPress={() => this.props.goToPage(i)} style={styles.tab}>
-              <Icon
-                name={tab}
-                size={30}
-                color={this.props.activeTab === i ?
-                  getColor('#ffffff') : getColor('rgba(255,255,255,.4)')}
-              />
+              <Text style={this.props.activeTab === i ? styles.active : styles.inactive}>
+                {tab}
+              </Text>
             </TouchableOpacity>
           )
         })}
@@ -54,5 +52,11 @@ const styles = StyleSheet.create({
     flex: 2,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  active: {
+    color: getColor('#ffffff')
+  },
+  inactive: {
+    color: getColor('rgba(255,255,255,.4)')
   }
 })

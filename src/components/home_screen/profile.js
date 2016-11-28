@@ -13,12 +13,10 @@ import {
 import _ from 'lodash'
 import moment from 'moment'
 import { firebaseApp } from '../../firebase'
-import Icon from 'react-native-vector-icons/Ionicons'
 import { getColor } from '../config'
 import { observer,inject } from 'mobx-react/native'
 import { Actions } from 'react-native-mobx'
 import Post from './post'
-
 
 @inject("appStore") @observer
 export default class Profile extends Component {

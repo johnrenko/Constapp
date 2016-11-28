@@ -29,9 +29,8 @@ export default class HomeScreen extends Component {
         initialPage={0}
         style={{borderTopWidth:0}}
         renderTabBar={() => <NavigationTab />}>
-          <Timeline tabLabel="md-globe"/>
-          <CreateNew tabLabel="md-add"/>
-          <Profile tabLabel="md-person"/>
+          <Timeline tabLabel="Expositions"/>
+          <CreateNew tabLabel="Oeuvres"/>
         </ScrollableTabView>
       </View>
     )

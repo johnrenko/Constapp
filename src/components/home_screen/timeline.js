@@ -13,8 +13,13 @@ import _ from 'lodash'
 import moment from 'moment'
 import { observer,inject } from 'mobx-react/native'
 import { getColor } from '../config'
+import { MKButton } from 'react-native-material-kit'
+import Icon from 'react-native-vector-icons/Ionicons'
 import { firebaseApp } from '../../firebase'
 import Post from './post'
+
+const PlainFab = MKButton.plainFab()
+  .build();
 
 
 @inject("appStore") @observer
@@ -121,7 +126,11 @@ export default class Timeline extends Component {
     if (this.state.isEmpty) {
       return (
         <View style={styles.waitView}>
-          <Text>Nothing there yet.</Text>
+          <PlainFab>
+            <Text>
+              +
+            </Text>
+          </PlainFab>
         </View>
       )
     }

@@ -152,8 +152,10 @@ export default class CreateNew extends Component {
     };
     ImagePicker.launchCamera(cam_options, (response) => {
       if (response.didCancel) {
+        console.log(response)
       }
       else if (response.error) {
+        console.log(response)
       }
       else {
         this.setState({

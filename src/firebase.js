@@ -2,9 +2,10 @@
 import * as firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCUeoGyNIbnQ5t3vHoIKCcdLBRKy3mSx6I",
-  authDomain: "rnfirebasestarter.firebaseapp.com",
-  databaseURL: "https://rnfirebasestarter.firebaseio.com",
-  storageBucket: "rnfirebasestarter.appspot.com",
+	apiKey: "AIzaSyAJO4FTAqReHONa3n4FvNo9R9u8RghAZJc",
+	authDomain: "museumlisting.firebaseapp.com",
+	databaseURL: "https://museumlisting.firebaseio.com",
+	storageBucket: "museumlisting.appspot.com",
+	messagingSenderId: "968555127105"
 }
 export const firebaseApp = firebase.initializeApp(firebaseConfig)
