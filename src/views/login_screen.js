@@ -91,7 +91,6 @@ export default class LoginScreen extends Component {
 
     return (
       <View style={styles.container}>
-      <Background imgSrouce={require('../assets/images/bk.png')}/>
       <KeyboardAwareScrollView contentContainerStyle={styles.scrollContainer} >
         <StatusBar
           backgroundColor={getColor('googleBlue700')}
@@ -100,7 +99,7 @@ export default class LoginScreen extends Component {
         />
         <View>
           <TouchableOpacity onPress={this._onLogoClicked}>
-            <Image source={require('../assets/images/jsapp.png')} style={styles.logoImage}/>
+            <Image source={require('../assets/images/CA.png')} style={styles.logoImage}/>
           </TouchableOpacity>
         </View>
         { initialView }
@@ -171,6 +170,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
+    marginTop: 50
   },
   scrollContainer: {
     flex: 1,
