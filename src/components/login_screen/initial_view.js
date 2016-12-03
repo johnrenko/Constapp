@@ -7,6 +7,9 @@ import {
 } from 'react-native'
 import { getColor } from '../config'
 import * as Animatable from 'react-native-animatable'
+import {
+  Button
+} from 'react-native-elements'
 
 
 export default class InitialView extends Component {
@@ -27,19 +30,23 @@ export default class InitialView extends Component {
       style={styles.container}
       delay={this.props.animDelay}
       onAnimationEnd={this._handleAnimEnd.bind(this)}>
-        <Text style={styles.title}>JSapp Social Poster App</Text>
-        <Text style={styles.version}>v1.3.2</Text>
+        <Text style={styles.title}>ConstApp</Text>
+        <Text style={styles.version}>v0.1</Text>
         <View style={styles.btnBox}>
-          <TouchableOpacity onPress={this._handleSignInPress.bind(this)}>
-            <View style={styles.btnContainer}>
-              <Text style={styles.btnText}>{ 'Sign In'.toUpperCase() }</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={this._handleSignUpPress.bind(this)}>
-            <View style={styles.btnContainer}>
-              <Text style={styles.btnText}>{ 'Sign Up'.toUpperCase() }</Text>
-            </View>
-          </TouchableOpacity>
+        <Button
+          large
+          raised
+          title='Sign in' 
+          backgroundColor='#3C5CB1'
+          onPress={this._handleSignInPress.bind(this)}
+          />
+        <Button
+          large
+          raised
+          title='Sign up' 
+          onPress={this._handleSignUpPress.bind(this)}
+          />
+
         </View>
       </Animatable.View>
     )

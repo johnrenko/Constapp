@@ -7,7 +7,7 @@ import {
 import ScrollableTabView from 'react-native-scrollable-tab-view'
 import { getColor } from '../components/config'
 import NavigationTab from '../components/home_screen/navTab'
-import Timeline from '../components/home_screen/timeline'
+import Expos from '../components/home_screen/expos'
 import CreateNew from '../components/home_screen/createNew'
 import Profile from '../components/home_screen/profile'
 
@@ -29,7 +29,7 @@ export default class HomeScreen extends Component {
         initialPage={0}
         style={{borderTopWidth:0}}
         renderTabBar={() => <NavigationTab />}>
-          <Timeline tabLabel="Expositions"/>
+          <Expos tabLabel="Expositions"/>
           <CreateNew tabLabel="Oeuvres"/>
         </ScrollableTabView>
       </View>
@@ -44,6 +44,6 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff'
+    backgroundColor: '#f5f5f5'
   }
 })

@@ -15,6 +15,10 @@ import { firebaseApp } from '../../firebase'
 import * as Animatable from 'react-native-animatable'
 import { Actions } from 'react-native-mobx'
 import { observer,inject } from 'mobx-react/native'
+import {
+  Button
+} from 'react-native-elements'
+
 
 
 @inject("appStore") @observer
@@ -28,7 +32,7 @@ export default class SignInForm extends Component {
       init: true,
       errMsg: null,
       forgotPass: false,
-      email: '',
+      email: 'vishnou@gmail.com',
       password: ''
     }
   }
@@ -86,14 +90,15 @@ export default class SignInForm extends Component {
         <View style={styles.btnContainers}>
           <TouchableOpacity onPress={this._handleForgotPassword}>
             <View style={styles.fogotBtnContainer}>
-              <Text style={styles.forgotBtn}>{'Forgot Password?'.toUpperCase()}</Text>
+              <Text style={styles.forgotBtn}>{'Forgot Password?'}</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={this._handleSignIn}>
-            <View style={styles.submitBtnContainer}>
-              <Text style={styles.submitBtn}>{'Let\'s Go'.toUpperCase()}</Text>
-            </View>
-          </TouchableOpacity>
+          <Button
+            raised
+            title='Lets Go' 
+            backgroundColor='#3C5CB1'
+            onPress={this._handleSignIn}
+          />
         </View>
       </Animatable.View>
     )
