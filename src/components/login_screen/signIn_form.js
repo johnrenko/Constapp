@@ -33,7 +33,7 @@ export default class SignInForm extends Component {
       errMsg: null,
       forgotPass: false,
       email: 'vishnou@gmail.com',
-      password: ''
+      password: 'Myob1234'
     }
   }
 
