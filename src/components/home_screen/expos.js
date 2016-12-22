@@ -70,6 +70,7 @@ export default class Expos extends Component {
   }
 
   _renderCard = (data) => {
+    console.log(data)
     if (data){
       const postExpo = []
       Object.keys(data).map((key, index) => {
@@ -90,6 +91,9 @@ export default class Expos extends Component {
         )
       })
       return postExpo 
+    }
+    else if(this.state.isEmpty) {
+      return null
     }
     else {
       return (
